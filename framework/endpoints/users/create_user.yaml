@@ -1,0 +1,9 @@
+user_first_name: 'Anonim'
+user_last_name: 'Doe'
+user_email: 'TesterDoe@nobody.com'
+user_phone: '+10000001'
+user_login: 'Doeys'
+user_password: 'ImSooSecure'
+user_timezone: 'Europe/Budapest'
+user_searchable: true
+group_name: 'read-only'

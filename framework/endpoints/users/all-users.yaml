@@ -1,0 +1,25 @@
+---
+contact_id: ~
+customer_id: ~
+groups:
+  -
+    customer_id: ~
+    group_disabled: ~
+    group_id: ~
+    group_name: ""
+    time_created: ""
+    time_updated: ""
+permissions: ~
+time_created: ""
+time_last_login: ""
+time_updated: ""
+user_deleted: ~
+user_disabled: ~
+user_email: ""
+user_first_name: ""
+user_id: 1
+user_last_name: ""
+user_login: ""
+user_phone: ""
+user_searchable: ~
+user_timezone: ""

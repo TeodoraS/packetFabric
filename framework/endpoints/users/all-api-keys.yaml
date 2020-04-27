@@ -1,0 +1,26 @@
+---
+api_key_id: ''
+api_key_secret: ''
+user_id: ''
+time_expires: ''
+time_created: ''
+time_updated: ''
+api_key_disabled: ~
+user:
+  user_id: ~
+  customer_id: ~
+  contact_id: ~
+  user_first_name: ''
+  user_last_name: ''
+  user_disabled: ~
+  user_email: ''
+  user_phone: ''
+  user_login: ''
+  groups: ~
+  permissions: ~
+  user_timezone: ''
+  user_searchable: ~
+  user_deleted: ~
+  time_last_login: ''
+  time_created: ''
+  time_updated: ''
