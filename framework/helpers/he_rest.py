@@ -12,7 +12,7 @@ Extra used pypi modules which may need to be installed:
 ==============================================================================
 """
 
-BASE_URL = "https://api-sandbox-jobs.trust.me.im.valid/"
+BASE_URL = "https://api-sandbox-jobs.sandbox.packetfabric.net"
 
 
 class RestApiHelper(object):
