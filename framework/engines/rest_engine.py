@@ -23,12 +23,13 @@ class RestEngine(object):
     """
     rest engine class
     """
+
     he_rest = RestApiHelper()
     logger = logging.getLogger()
-    request_value = namedtuple('Value', 'return_code json')
+    request_value = namedtuple("Value", "return_code json")
 
     def __init__(self):
-        if not hasattr(type(self), '_session'):
+        if not hasattr(type(self), "_session"):
             self._create_session(config_file.login_params)
         self.logger.info("Rest engine initialized")
 
@@ -39,7 +40,7 @@ class RestEngine(object):
 
         :return: session object
         """
-        url = cls.he_rest.generate_full_endpoint('login')
+        url = cls.he_rest.generate_full_endpoint("login")
         cls._session = requests.Session()
         cls._session.post(url, data=login_params)
 
