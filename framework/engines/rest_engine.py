@@ -55,7 +55,7 @@ class RestEngine(object):
                 if self.he_rest.is_http_status_code_success(resp.status_code):
                     return self.request_value(resp.status_code, resp.json())
                 else:
-                    raise Exception("GET status code not successful: {}, content {}".format(resp.status_code, resp.text))
+                    raise Exception(resp.status_code, resp.text)
             except requests.exceptions.ConnectionError as e:
                 lost_conn_err = e
                 retry -= 1
@@ -71,8 +71,7 @@ class RestEngine(object):
                 if self.he_rest.is_http_status_code_success(resp.status_code):
                     return self.request_value(resp.status_code, resp.json())
                 else:
-                    raise Exception(
-                        "POST status code not successful: {}, content {}".format(resp.status_code, resp.text))
+                    raise Exception(resp.status_code, resp.text)
             except requests.exceptions.ConnectionError as e:
                 lost_conn_err = e
                 retry -= 1
@@ -88,8 +87,7 @@ class RestEngine(object):
                 if self.he_rest.is_http_status_code_success(resp.status_code):
                     return self.request_value(resp.status_code, resp.json())
                 else:
-                    raise Exception(
-                        "PATCH status code not successful: {}, content {}".format(resp.status_code, resp.text))
+                    raise Exception(resp.status_code, resp.text)
             except requests.exceptions.ConnectionError as e:
                 lost_conn_err = e
                 retry -= 1
@@ -105,8 +103,7 @@ class RestEngine(object):
                 if self.he_rest.is_http_status_code_success(resp.status_code):
                     return self.request_value(resp.status_code, resp.json())
                 else:
-                    raise Exception(
-                        "PATCH status code not successful: {}, content {}".format(resp.status_code, resp.content))
+                    raise Exception(resp.status_code, resp.text)
             except requests.exceptions.ConnectionError as e:
                 lost_conn_err = e
                 retry -= 1
