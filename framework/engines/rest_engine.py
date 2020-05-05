@@ -52,6 +52,7 @@ class RestEngine(object):
         retry = 5
         while retry:
             try:
+                self.logger.info("GET {}".format(url))
                 resp = self._session.get(url)
                 if self.he_rest.is_http_status_code_success(resp.status_code):
                     return self.request_value(resp.status_code, resp.json())
@@ -68,6 +69,7 @@ class RestEngine(object):
         retry = 5
         while retry:
             try:
+                self.logger.info("POST {}".format(url))
                 resp = self._session.post(url, json=value)
                 if self.he_rest.is_http_status_code_success(resp.status_code):
                     return self.request_value(resp.status_code, resp.json())
@@ -84,6 +86,7 @@ class RestEngine(object):
         retry = 5
         while retry:
             try:
+                self.logger.info("PATCH {}".format(url))
                 resp = self._session.patch(url, json=value)
                 if self.he_rest.is_http_status_code_success(resp.status_code):
                     return self.request_value(resp.status_code, resp.json())
@@ -100,6 +103,7 @@ class RestEngine(object):
         retry = 5
         while retry:
             try:
+                self.logger.info("DELETE {}".format(url))
                 resp = self._session.delete(url)
                 if self.he_rest.is_http_status_code_success(resp.status_code):
                     return self.request_value(resp.status_code, resp.json())

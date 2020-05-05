@@ -43,7 +43,7 @@ class TestUsers:
         """
         validate keys from rest call to get all api keys
         """
-        all_api_keys = session.get(self.helper.generate_full_endpoint("/api-keys"))
+        all_api_keys = session.get(self.helper.generate_full_endpoint("api-keys"))
         assert (all_api_keys.return_code == 200)
         with open(build_path.join("framework", "endpoints", "users", "all-api-keys.yaml")) as yml_file:
             entries = yaml.full_load(yml_file)
