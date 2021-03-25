@@ -8,7 +8,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "mock==3.0.5",
-        "Pyyaml==5.3.1",
+        "Pyyaml==5.4",
         "pytest==5.4.1",
         "requests==2.22.0"]
 )
